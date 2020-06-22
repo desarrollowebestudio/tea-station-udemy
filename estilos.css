@@ -1,9 +1,7 @@
 /* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap');
 
-/* ESTILOS GENERALES */
-
-/* Variables */
+/* VARIABLES */
 html {
 
   /* Color Primario: Verde Oliva */
@@ -23,9 +21,62 @@ html {
   --fuenteCursiva: 'Grand Hotel', cursive;
 
   /* Dimensiones */
+  --tamagnoFuenteEstandar: 0.875rem;
   --espaciado: 0.25rem;
   --radioBordes: 0.5rem;
 
+  /* Límite Media Queries */
+  --pantallaGrande: 800px;
+
   /* Otros */
   --trasicionLineal: all 0.3s linear;
+}
+
+/* ESTILOS GLOBALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colorBlanco);
+  font-family: var(--fuentePrimaria);
+  color: var(--colorSecundarioOscuro);
+  line-height: 1.5;
+  font-size: var(--tamagnoFuenteEstandar);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ESTILOS GENERALES TEXTO */
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: var(--tamagnoFuenteEstandar); }
+p { margin-bottom: 1.25rem; }
+
+h1, h2, h3, h4 {
+  letter-spacing: var(--espaciado);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75 rem;
+}
+
+/* ESTILOS GENERALES TEXTO: MEDIA QUERIES */
+@media (min-width: --pantallaGrande) {
+  body { font-size: 1rem; }
+  h1 { font-size: 4rem; }
+  h2 { font-size: 2.5rem; }
+  h3 { font-size: 2rem; }
+  h4 { font-size: 1rem; }
+  h1, h2, h3, h4 { line-height: 1; }
 }
