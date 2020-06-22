@@ -1,2 +1,31 @@
-/* Fuentes: Google Fonts */
+/* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap');
+
+/* ESTILOS GENERALES */
+
+/* Variables */
+html {
+
+  /* Color Primario: Verde Oliva */
+  --colorPrimario: hsl(90, 40%, 40%);
+  --colorPrimarioClaro:hsl(90, 70%, 70%);
+
+  /* Color Secundario: Azul */
+  --colorSecundarioOscuro:hsl(210, 60%, 15%);
+  --colorSecundarioGris:hsl(210, 20%, 50%);
+  --colorSecundarioClaro:hsl(210, 35%, 95%);
+
+  /* Colores Base */
+  --colorBlanco: white;
+
+  /* Fuentes */
+  --fuentePrimaria: 'Catamaran', sans-serif;
+  --fuenteCursiva: 'Grand Hotel', cursive;
+
+  /* Dimensiones */
+  --espaciado: 0.25rem;
+  --radioBordes: 0.5rem;
+
+  /* Otros */
+  --trasicionLineal: all 0.3s linear;
+}
