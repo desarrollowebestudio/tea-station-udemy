@@ -147,3 +147,9 @@ div.textoHero a.botonHero {
   outline-offset: 4px;
   font-weight: bold;
 }
+
+div.separadorHeader {
+  height: 0.5rem;
+  background-image: linear-gradient(
+    to right, var(--colorPrimario), #E8B848, var(--colorPrimario));
+}
