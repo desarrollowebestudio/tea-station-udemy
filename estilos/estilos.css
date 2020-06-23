@@ -10,7 +10,7 @@ html {
 
   /* Color Secundario: Azul */
   --colorSecundarioOscuro:hsl(210, 60%, 15%);
-  --colorSecundarioGris:hsl(210, 20%, 50%);
+  --colorSecundario:hsl(210, 20%, 50%);
   --colorSecundarioClaro:hsl(210, 35%, 95%);
 
   /* Colores Base */
@@ -29,7 +29,7 @@ html {
   --pantallaGrande: 800px;
 
   /* Otros */
-  --trasicionLineal: all 0.3s linear;
+  --trasicionLineal: all 0.4s linear;
 }
 
 /* ESTILOS GLOBALES PÁGINA */
@@ -87,7 +87,7 @@ h1, h2, h3, h4 {
   letter-spacing: var(--espaciado);
   text-transform: capitalize;
   line-height: 1.25;
-  margin-bottom: 0.75 rem;
+  margin-bottom: 0.75rem;
 }
 
 /* ESTILOS GENERALES TEXTO: MEDIA QUERIES */
@@ -152,4 +152,45 @@ div.separadorHeader {
   height: 0.5rem;
   background-image: linear-gradient(
     to right, var(--colorPrimario), #E8B848, var(--colorPrimario));
+}
+
+/* SECCIÓN: HABILIDADES */
+section.seccionHabilidades {
+  background-color: var(--colorSecundarioClaro);
+}
+
+article.habilidad {
+  text-align: center;
+  padding: 2.5rem 0;
+  transition: var(--trasicionLineal);
+}
+
+span.iconoHabilidad {
+  font-size: 2.5rem;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  color: var(--colorPrimario);
+  transition: var(--trasicionLineal);
+}
+
+p.textoHabilidad {
+  color: var(--colorSecundario);
+  max-width: 15rem;
+  margin: 0 auto;
+}
+
+article.habilidad:hover {
+  background-color: var(--colorBlanco);
+  box-shadow: 0 2px var(--colorPrimario);
+}
+
+article.habilidad:hover span.iconoHabilidad {
+  transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--colorSecundarioOscuro);
+  color: var(--colorBlanco);
+  text-align: center;
 }
