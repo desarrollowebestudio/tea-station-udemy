@@ -32,7 +32,7 @@ html {
   --trasicionLineal: all 0.3s linear;
 }
 
-/* ESTILOS GLOBALES */
+/* ESTILOS GLOBALES PÁGINA */
 * {
   margin: 0;
   padding: 0;
@@ -47,17 +47,36 @@ body {
   font-size: var(--tamagnoFuenteEstandar);
 }
 
+/* ESTILOS GLOBALES ELEMENTOS */
 a {
   text-decoration: none;
 }
 
 img {
   width: 100%;
-  height: auto;
   display: block;
 }
 
-/* ESTILOS GENERALES TEXTO */
+[class^="boton"] {
+  background-color: var(--colorPrimario);
+  color: var(--colorBlanco);
+  text-transform: uppercase;
+  padding: 1em 2.5em;
+  letter-spacing: var(--espaciado);
+  display: inline-block;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  transition: var(--trasicionLineal);
+}
+
+[class^="boton"]:hover {
+  background-color: var(--colorPrimarioClaro);
+  color: var(--colorPrimario);
+}
+
+/* ESTILOS GLOBALES TEXTO */
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
@@ -79,4 +98,52 @@ h1, h2, h3, h4 {
   h3 { font-size: 2rem; }
   h4 { font-size: 1rem; }
   h1, h2, h3, h4 { line-height: 1; }
+}
+
+/* HEADER */
+header {
+  min-height: 100vh;
+
+  /* Imagen Fondo */
+  background-image: url('/../imagenes/FondoPrincipal.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  /* Ajuste Oscurecimiento */
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+
+  /* Posición de referencia para posición absoluta de hijos */
+  position: relative;
+}
+
+div.textoHero {
+  text-align: center;
+
+  /* Estrategia Centrado: */
+  /* A) Esquina superior izquierda del texto en centro del contenedor */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* B) Mover texto reubicando su propio centro donde estaba esquina superior izquierda */
+  transform: translate(-50%, -50%);
+}
+
+div.textoHero h2 {
+  font-family: var(--fuenteCursiva);
+  color: var(--colorPrimario);
+}
+
+div.textoHero h1 {
+  color: var(--colorBlanco);
+  text-transform: uppercase;
+  margin-top: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+div.textoHero a.botonHero {
+  outline: 2px solid var(--colorPrimario);
+  outline-offset: 4px;
+  font-weight: bold;
 }
