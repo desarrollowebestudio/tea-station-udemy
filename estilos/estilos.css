@@ -274,7 +274,7 @@ section.seccionProductos {
 }
 
 section.seccionProductos article {
-  padding: 2rem 0;
+  padding-top: 1rem;
 }
 
 div.contenedorProducto {
@@ -443,9 +443,99 @@ div.imagenServicio span {
   border: 6px solid var(--colorSecundarioClaro);
 }
 
+/* SECCIÓN: CONTACTO */
+section.seccionContacto {
+  background-color: var(--colorSecundarioClaro);
+}
+
+section.seccionContacto article {
+  margin: 1rem 0;
+}
+
+div.itemInfoContacto {
+  margin-bottom: 1.75rem;
+}
+
+h4.tituloInfoContacto {
+  color: var(--colorPrimario);
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+h4.tituloInfoContacto i {
+  padding-right: 0.75rem;
+}
+
+h5.valorInfoContacto {
+  letter-spacing: 0.1em;
+}
+
+article.formulario {
+  background-color: white;
+  border-radius: var(--radioBordes);
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 35rem;
+  overflow: hidden;
+}
+
+article.formulario:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+article.formulario div.tituloSeccion {
+  margin-bottom: 0;
+}
+
+article.formulario h3 {
+  padding-top: 1.25rem;
+}
+
+div.camposFormulario {
+  padding: 1rem 1.5rem;
+}
+
+.campoFormulario {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  border: none;
+  background-color: var(--colorSecundarioClaro);
+  border-radius: 4px;
+  font-family: var(--fuentePrimaria);
+}
+
+input[name="nombre"] {
+  text-transform: uppercase;
+}
+
+.campoFormulario::placeholder {
+  text-transform: none;
+}
+
+.campoFormulario:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px var(--colorPrimario); 
+}
+
+button.botonEnviarFormulario {
+  display: block;
+  width: 100%;
+  border-radius: 0;
+  padding: 1.25em 0;
+}
+
+/* SECCIÓN: CONTACTO - MEDIA QUERIES */
+@media (min-width: 960px) {
+  section.seccionContacto article {
+    float: left;
+    width: 50%;
+  }
+}
+
 /* PIE DE PÁGINA */
 footer {
   background-color: var(--colorSecundarioOscuro);
   color: var(--colorBlanco);
-  text-align: center;
 }
