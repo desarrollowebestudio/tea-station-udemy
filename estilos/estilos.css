@@ -104,7 +104,7 @@ div.tituloSeccion h3 {
 }
 
 /* ESTILOS GENERALES TEXTO - MEDIA QUERIES */
-@media (min-width: 800px) {
+@media (min-width: 760px) {
   body { font-size: 1rem; }
   h1 { font-size: 4rem; }
   h2 { font-size: 2.5rem; }
@@ -233,7 +233,7 @@ article.habilidad:hover span.iconoHabilidad {
 }
 
 /* SECCIÓN: ACERCA DE */
-div.contenedorSeccion article {
+section.seccionAcercaDe article {
   padding: 2rem 0;
 }
 
@@ -357,6 +357,72 @@ div.contenedorProducto p {
 
   section.seccionProductos article {
   padding-right: 2rem;
+  }
+}
+
+/* SECCIÓN: SERVICIOS */
+div.tituloServicios {
+  margin-top: 4rem;
+  margin-bottom: -2rem;
+  text-align: center;
+}
+
+article.cartaServicio {
+  margin: 2rem 0;
+  background: var(--colorSecundarioClaro);
+  border-radius: var(--radioBordes);
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--trasicionLineal);
+}
+
+article.cartaServicio:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+div.imagenServicio img {
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+div.infoServicio {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+div.infoServicio p {
+  max-width: 25rem;
+  color: var(--colorSecundario);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.botonServicio {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  border-radius: 100px;
+  font-weight: normal;
+}
+
+/* SECCIÓN: SERVICIOS - MEDIA QUERIES */
+@media (min-width: 760px) {
+  article.cartaServicio {
+    float: left;
+    /* 2 Cartas: 2 x 45% c/u + 5% Margen c/u */
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+/* SECCIÓN: SERVICIOS - MEDIA QUERIES */
+@media (min-width: 960px) {
+  article.cartaServicio {
+    float: left;
+    /* 3 Cartas: 3 x 30% c/u + 3.33 % Margen c/u */
+    width: 30%;
+    margin-right: calc(10% / 3);
   }
 }
 
