@@ -389,7 +389,7 @@ div.imagenServicio img {
 
 div.infoServicio {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem 2rem 1rem;
 }
 
 div.infoServicio p {
@@ -416,7 +416,6 @@ a.botonServicio {
   }
 }
 
-/* SECCIÓN: SERVICIOS - MEDIA QUERIES */
 @media (min-width: 960px) {
   article.cartaServicio {
     float: left;
@@ -424,6 +423,24 @@ a.botonServicio {
     width: 30%;
     margin-right: calc(10% / 3);
   }
+}
+
+/* SECCIÓN SERVICIOS - ÍCONOS */
+div.imagenServicio {
+  position: relative;
+}
+
+div.imagenServicio span {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  font-size: 2rem;
+  color: var(--colorPrimario);
+  background-color: var(--colorPrimarioClaro);
+  transform: translate(-50%, 50%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 50%;
+  border: 6px solid var(--colorSecundarioClaro);
 }
 
 /* PIE DE PÁGINA */
