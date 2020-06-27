@@ -22,7 +22,7 @@ html {
 
   /* Dimensiones */
   --tamagnoFuenteEstandar: 0.875rem;
-  --espaciado: 0.25rem;
+  --espaciado: 0.2rem;
   --radioBordes: 0.5rem;
 
   /* Otros */
@@ -83,7 +83,8 @@ img {
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.5rem; }
-h4 { font-size: var(--tamagnoFuenteEstandar); }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1rem; }
 p { margin-bottom: 1.25rem; }
 
 h1, h2, h3, h4 {
@@ -107,8 +108,8 @@ div.tituloSeccion h3 {
   body { font-size: 1rem; }
   h1 { font-size: 4rem; }
   h2 { font-size: 2.5rem; }
-  h3 { font-size: 2rem; }
-  h4 { font-size: 1rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.15rem; }
   h1, h2, h3, h4 { line-height: 1; }
 }
 
@@ -264,6 +265,98 @@ div.textoAcercaDe p {
     float: left;
     width: 50%;
     padding-left: 2rem;
+  }
+}
+
+/* SECCIÓN: PRODUCTOS */
+section.seccionProductos {
+  background-color: var(--colorSecundarioClaro);
+}
+
+section.seccionProductos article {
+  padding: 2rem 0;
+}
+
+div.contenedorProducto {
+  margin-bottom: 2rem;
+}
+
+div.descripcionProductos p {
+  max-width: 30rem;
+  text-align: justify;
+  color: var(--colorSecundario);
+}
+
+div.imagenProducto {
+  border-radius: var(--radioBordes);
+  overflow: hidden;
+  background-color: var(--colorPrimario);
+  margin-bottom: 2rem;
+}
+
+div.imagenProducto img {
+  transition: var(--trasicionLineal);
+  height: 16rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+div.imagenProducto:hover img {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+h5.precioProducto {
+  color: var(--colorPrimario);
+}
+
+div.contenedorProducto p {
+  text-align: justify;
+  color: var(--colorSecundario);
+}
+
+/* SECCIÓN: PRODUCTOS - MEDIA QUERIES */
+@media (min-width: 600px) {
+  div.contenedorProducto {
+    float: left;
+    width: 50%;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 960px) {
+  div.contenedorProducto {
+    width: calc(100% / 3);
+  }
+
+  article.infoProductos {
+    text-align: center;
+  }
+
+  div.descripcionProductos p {
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+}
+
+/* Sistema de columnas anidadas */
+@media (min-width: 1200px) {
+  article.infoProductos {
+    float: left;
+    width: 30%;
+  }
+
+  article.catalogoProductos {
+    float: left;
+    width: 70%;
+  }
+
+  article.infoProductos {
+    text-align: left;
+  }
+
+  section.seccionProductos article {
+  padding-right: 2rem;
   }
 }
 
