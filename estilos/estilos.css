@@ -87,6 +87,10 @@ ul {
   list-style-type: none;
 }
 
+.ocultar {
+  display: none;
+}
+
 /* ESTILOS GLOBALES TEXTO */
 h1 { font-size: 3rem; }
 h2 { font-size: 2rem; }
@@ -160,6 +164,16 @@ nav#barraNavegacion {
   background-color: var(--colorNegroTransparente);
   z-index: 2;
   box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+  border-left: 0.25rem solid var(--colorPrimario);
+
+  /* Ocultar barra de navegación por defecto */
+  transform: translateX(-100%);
+  transition: var(--trasicionLineal);
+}
+
+/* Mostrar de vuelta barra de navegación */
+nav#barraNavegacion.mostrarBarra {
+  transform: translateX(0);
 }
 
 div#encabezadoBarraNavegacion {
@@ -167,24 +181,28 @@ div#encabezadoBarraNavegacion {
   padding: 0.5rem 1rem;
 }
 
-span.iconoCerrar {
+span#iconoCerrarBarra {
   font-size: 2rem;
   color: hsl(0, 75%, 75%);
   transition: var(--trasicionLineal);
   cursor: pointer;
 }
 
-span.iconoCerrar:hover {
+span#iconoCerrarBarra:hover {
   color: hsl(0, 65%, 45%);
 }
 
 ul#listaEnlaces li {
-  display: block;
   padding: 1em;
   text-transform: uppercase;
   letter-spacing: var(--espaciado);
   transition: var(--trasicionLineal);
-  cursor: pointer;
+  color: var(--colorPrimarioClaro);
+}
+
+ul#listaEnlaces a {
+  display: block;
+  font-size: 0.8rem;
   color: var(--colorPrimarioClaro);
 }
 
@@ -193,16 +211,10 @@ ul#listaEnlaces i {
   padding-right: 2.25rem;
 }
 
-ul#listaEnlaces a {
-  font-size: 0.8rem;
-  color: var(--colorPrimarioClaro);
-}
-
 ul#listaEnlaces li:hover {
   background-color: var(--colorPrimarioClaro);
   color: var(--colorPrimario);
-  padding-left: 1.1em;
-  border-left: 0.3em solid var(--colorPrimario);
+  padding-left: 1.35em;
 }
 
 ul#listaEnlaces li:hover a {
