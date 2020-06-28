@@ -1,5 +1,5 @@
 /* FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;700&family=Grand+Hotel&family=Cinzel&display=swap');
 
 /* VARIABLES */
 html {
@@ -19,6 +19,7 @@ html {
   /* Fuentes */
   --fuentePrimaria: 'Catamaran', sans-serif;
   --fuenteCursiva: 'Grand Hotel', cursive;
+  --fuenteDecorativa: 'Cinzel', fantasy;
 
   /* Dimensiones */
   --tamagnoFuenteEstandar: 0.875rem;
@@ -87,7 +88,7 @@ h4 { font-size: 1.15rem; }
 h5 { font-size: 1rem; }
 p { margin-bottom: 1.25rem; }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
   letter-spacing: var(--espaciado);
   text-transform: capitalize;
   line-height: 1.25;
@@ -164,16 +165,18 @@ div.textoHero h2 {
 }
 
 div.textoHero h1 {
+  font-family: var(--fuenteDecorativa);
   color: var(--colorBlanco);
-  text-transform: uppercase;
+  font-weight: normal;
   margin-top: 1.25rem;
   margin-bottom: 2rem;
+  text-shadow: 0 2px 3px black;
 }
 
 div.textoHero a.botonHero {
   outline: 2px solid var(--colorPrimario);
   outline-offset: 4px;
-  font-weight: bold;
+  font-family: var(--fuenteDecorativa);
   font-size: 0.875rem;
 }
 
@@ -285,6 +288,10 @@ div.descripcionProductos p {
   max-width: 30rem;
   text-align: justify;
   color: var(--colorSecundario);
+}
+
+article.catalogoProductos {
+  margin-top: 2rem;
 }
 
 div.imagenProducto {
@@ -536,6 +543,35 @@ button.botonEnviarFormulario {
 
 /* PIE DE PÁGINA */
 footer {
-  /* background-color: var(--colorSecundarioOscuro); */
-  /* color: var(--colorBlanco); */
+  background-color: hsl(0, 0%, 12%);
+  color: var(--colorBlanco);
+  text-align: center;
+}
+
+div.iconosSociales a {
+  color: var(--colorBlanco);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--trasicionLineal);
+}
+
+div.iconosSociales a:hover {
+  color: var(--colorPrimarioClaro);
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+div.infoFooter {
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: var(--espaciado);
+}
+
+div.infoFooter span {
+  margin-right: 1rem;
+}
+
+span#nombreProyectoFooter {
+  color: var(--colorPrimario);
 }
