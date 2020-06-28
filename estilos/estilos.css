@@ -536,6 +536,6 @@ button.botonEnviarFormulario {
 
 /* PIE DE PÁGINA */
 footer {
-  background-color: var(--colorSecundarioOscuro);
-  color: var(--colorBlanco);
+  /* background-color: var(--colorSecundarioOscuro); */
+  /* color: var(--colorBlanco); */
 }
