@@ -31,6 +31,34 @@ html {
 
   /* Otros */
   --trasicionLineal: all 0.4s linear;
+
+}
+
+/* ANIMACIONES */
+@keyframes palpitar {
+  0% {  transform: scale(1); }
+  40% { transform: scale(1.2); }
+  80% { transform: scale(1); }
+}
+
+@keyframes palpitarBoton {
+  0% {   transform: scale(1.25); opacity: 0; }
+  50% {  transform: scale(1.5); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes deslizarIzquierda {
+  0% {   transform: translateX(50vw); opacity: 0; }
+  50% {  transform: translateX(-15vw); }
+  80% {  transform: translateX(5vw);  }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes deslizarDerecha {
+  0% {   transform: translateX(-50vw); opacity: 0; }
+  50% {  transform: translateX(15vw); }
+  80% {  transform: translateX(-5vw);  }
+  100% { transform: translateX(0px); opacity: 1; }
 }
 
 /* ESTILOS GLOBALES PÁGINA */
@@ -153,6 +181,7 @@ span#botonBarraNavegacion {
   background-color: var(--colorPrimarioTransparente);
   padding: 0.25em 0.3em 0.05em 0.3em;
   cursor: pointer;
+  animation: palpitar 4s ease infinite;
 }
 
 nav#barraNavegacion {
@@ -245,6 +274,9 @@ header {
 
   /* Posición de referencia para posición absoluta de hijos */
   position: relative;
+
+  /* Eliminación de barra de scroll durante animación*/
+  overflow-x: hidden;
 }
 
 div.textoHero {
@@ -263,6 +295,7 @@ div.textoHero h2 {
   font-family: var(--fuenteCursiva);
   color: var(--colorPrimario);
   text-shadow: 0 1px 3px black;
+  animation: deslizarIzquierda 4s ease 1;
 }
 
 div.textoHero h1 {
@@ -272,6 +305,7 @@ div.textoHero h1 {
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   text-shadow: 0 1px 3px black;
+  animation: deslizarDerecha 4s ease 1;
 }
 
 div.textoHero a.botonHero {
@@ -279,6 +313,7 @@ div.textoHero a.botonHero {
   outline-offset: 4px;
   font-family: var(--fuenteDecorativa);
   font-size: 0.875rem;
+  animation: palpitarBoton 4s linear 1; 
 }
 
 div.separadorHeader {
